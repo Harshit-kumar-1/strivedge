@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Learning page</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div id="demo">
+        <p class="element">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eaque nobis incidunt ipsa odio reiciendis ab! Eos vitae quia id!
+        </p>
+
+        <div class="btn">
+            <button onclick="show()" id="btn-hide"> show </button>
+            <button onclick="hide()" id="btn-hide"> hide </button>
+        </div>
+
+        <p id="element">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eaque nobis incidunt ipsa odio reiciendis ab! Eos vitae quia id!
+        </p>
+
+        <div class="btn">
+            <button onclick="replace()" id="btn-hide"> change </button>
+            <button onclick="revert()" id="btn-hide"> revert-change </button>
+        </div>
+
+    </div>
+
+
+
+    <div id="demo">
+        <img src="./offf.png" alt="" id="image">
+
+        <div class="btn">
+            <button onclick="on()" id="btn-hide">on</button>
+            <button onclick="off()" id="btn-hide">off</button>    
+        </div>
+    </div>
+
+
+    <div id="demo">  
+        <div>
+            Today's Day Month Date Year Time and standard is : <span id="date"></span> 
+        </div>
+
+        <div class="btn">
+            <button onclick="showDate()" id="btn-hide">show</button>
+            <button onclick="hideDate()" id="btn-hide">hide</button>
+        </div>
+    </div>
+
+    <div id="demo">
+        <form>
+            <label for="number">Number: "Between 1 to 10"</label> <br>
+            <input type="text"  id="number" required>
+            <span id="result"></span> <br>
+        </form>
+        <div >
+            <button type="submit" onclick="validate()">Submit</button>
+        </div>
+    </div>
+
+
+    <div id="demo">
+        <div id="container">
+            <div id="animate">
+                <!-- 🏇🏼 🏇🏼 -->
+                <img src="./cat.png" alt=" " width="100%" id="img">
+            </div>
+        </div>
+        <div class="btn">
+            <button onclick="animated()">walk</button>
+        </div>
+    </div>
+
+    <div id="demo">
+        <p onmouseover="mOver(this)" onmouseout="mOut(this)" style="padding: 20px 10px;">
+            Hello Mouse is here (MouseOut is Working);
+        </p>
+    </div>
+
+    <div id="demo">
+        <p style="padding: 20px 10px;" >
+            Event Handler to an Element <span id="eventClick"></span>
+        </p>
+        <div class="btn">
+            <button id="addEvent">addEventListener</button>
+            <button id="addEvent0">reset count</button>
+        </div>
+    </div>
+
+
+    <div id="demo">
+        <div>
+            <div id="pbox">
+                <div id="cbox">
+
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button id="changebg">Random color changes</button>
+        </div>
+    </div>
+
+
+    <div id="demo" >
+        
+        <button class="collapse">Open Collapsible</button>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <button class="collapse">Open Collapsible</button>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, vel!</p>
+        </div>
+    </div>
+
+
+    <!-- <div id="demo" >
+        
+        <div class="game">
+            <h2>Guess the Number</h2>
+            <input type="text" id="num">
+            <div id="result"> kese ho</div>
+        </div>
+        <div class="btn">
+            <button id="check">Check</button>
+        </div>
+        
+    </div>
+
+
+    <div>
+        <div id="hello"></div>
+    </div>
+    <button id="button">Button</button>
+
+
+    <div class="demo">
+        
+    </div> -->
+
+
+
+    <div id="demo">
+        <div class="contener">
+            <p id="first">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ex.
+            </p>
+            <button id="btn1">
+                change first
+            </button>
+            <p id="second">
+                distinctio repellat totam officiis fugiat perferendis quaerat odit quasi!
+            </p>
+            <button id="btn2">
+                change second
+            </button>
+
+            <p id="third">
+                Harum repellat optio accusantium architecto unde inventore expedita distinctio ipsum modi vero!
+            </p>
+            <button id="btn3">
+                change third
+            </button>
+        </div>
+    </div>
+
+
+    <div id="demo">
+        <div id="conten">
+            <div class="d1">
+                This is D1 Div;
+            </div>
+            <div class="d2">
+                This is D2 Div;
+            </div>
+        </div>
+        <div class="btn">
+            <button id="button">
+                Add Element
+            </button>
+            <button id="remove">
+                remove Element
+            </button>
+        </div>
+    </div>
+
+
+    <div id="demo">
+        <div id="content">
+            <div class="d1">
+                This is D1 Div;
+            </div>
+            <div class="d2">
+                This is D2 Div;
+            </div>
+            <div class="d3">
+                This is D3 Div;
+            </div>
+            <div style="border: 1px solid purple;" id="d4">
+                Add Elements Here
+            </div>
+            <div class="d4">
+                This is D4 Div;
+            </div>
+            <div class="d5">
+                This is D5 Div;
+            </div>
+        </div>
+        <div class="btn">
+            <button id="button2">
+                Add Element
+            </button>
+            <button id="remove1">
+                remove Element
+            </button>
+        </div>
+    </div>
+
+    <div id="demo">
+        <div id="bind"></div>
+    </div>
+
+
+    <script src="jsOutputs.js"></script>
+</body>
+</html>

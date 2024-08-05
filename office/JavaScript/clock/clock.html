@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Clock</title>
+
+</head>
+<body>
+        <nav>
+            <ul class="sidebar">
+                <li id="hideSidebar"><a ><i class="fa-solid fa-xmark"></i></a></li>
+                <!-- <li><a href="#clockNone">Clock</a></li> -->
+                <li><a href="#isClockChecked">Customize</a></li>
+                <li><a href="#seprate">Stopwatch</a></li>
+                <li><a href="#seprateTime">Timer</a></li>
+            </ul>
+            <ul>
+                <li><a href="#clockNone">Clock</a></li>
+                <li class="hideOnMobile"><a href="#isClockChecked">Customize</a></li>
+                <li class="hideOnMobile"><a href="#seprate">Stopwatch</a></li>
+                <li class="hideOnMobile"><a href="#seprateTime">Timer</a></li>
+                <li  id="showSidebar"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        
+    <!-- Do not Touch -->
+    <div class="container">
+        <div id="clockNone">
+            <h1>Digital Clock</h1>
+            <div class="div" id="clock">
+                <div class="all">
+                    <div id="date" class="date">
+
+                    </div>
+                </div>
+                <div class="all">
+                    <div id="hour" class="time"></div>
+                    <div id="minute" class="time"></div>
+                    <div id="second" class="time"></div>
+                    <span id="seprate"></span>
+                </div>
+            </div>
+        </div>
+        <div id="stopWatchNone">
+            <h1>StopWatch</h1>
+            <div class="div" id="stopWatch">
+                <div class="all" >
+                    <div id="Minite" class="time">00</div>
+                    <div id="Second" class="time">00</div>
+                    <div id="miniSecond" class="time">00</div>
+                </div>
+                <div class="all">
+                    <div id="date">
+                        <button  id="Start">Start</button>
+                        <button  id="Stop">Stop</button>
+                        <button  id="Reset">Reset</button>
+                    </div>
+                    <span id="seprateTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="timerNone">
+            <h1>Digital Timer</h1>
+            <div class="div" id="timer">
+                <div class="all">
+                    <div id="Minite" class="time">
+                        <div class="timee">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-selected" id="hour-selected">HH</div>
+                                <div class="dropdown-items" id="hour-items">
+                                    <!-- Hour options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Second" class="time">
+                        <div class="timee">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-selected" id="minute-selected">MM</div>
+                                <div class="dropdown-items" id="minute-items">
+                                    <!-- Minute options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="miniSecond" class="time">
+                        <div class="timee">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-selected" id="second-selected">SS</div>
+                                <div class="dropdown-items" id="second-items">
+                                    <!-- Second options -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="color: black;">
+                    Time remaining : <span id="remain">00:00:00</span>
+                </div>
+                <div class="all">
+                    <div id="date">
+                        <button id="start">Start</button>
+                        <button id="stop">Stop</button>
+                        <button id="reset">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Costumies">
+            <h1>Customize</h1>
+            <div class="Customize">
+                    <div>
+                        <div>
+                            <label>Clock</label>
+                        </div>
+                        <div >
+                            <input type="checkbox" id="isClockChecked">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label>StopWatch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="isStopWatchChecked">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label>Timer</label>
+                        </div>
+                        <div >
+                            <input type="checkbox" id="isTimerChecked">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        
+</div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
