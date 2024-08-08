@@ -250,13 +250,102 @@ $fruits = ['Banana', 'Apple', 'Mango',"Strawberry", "Blueberry", "Kiwi", "Peach"
 sort($fruits);
 print_r($fruits);
 
-// ksort()
+// rsort()
 
 rsort($fruits);
 print_r($fruits);
 
 
-//
+// ksort
+$fruitColors = [
+    "Strawberry" => "Red",
+    "Blueberry" => "Blue",
+    "Kiwi" => "Green",
+    "Peach" => "Orange",
+    "Pomegranate" => "Red"
+];
+
+ksort($fruitColors);
+print_r($fruitColors);
+
+// krsort
+
+krsort($fruitColors);
+print_r($fruitColors);
+
+
+
+
+// asort();
+
+asort($fruitColors);
+print_r($fruitColors);
+
+
+// arsort();
+
+arsort($fruitColors);
+print_r($fruitColors);
+
+// array-unique
+
+$uniqueFruitsColor =  array_unique($fruitColors);
+print_r($uniqueFruitsColor);
+
+// array_map();
+$fruits = array_map(function ($fruit) {
+    echo $fruit ."\n";
+}, $fruitColors);
+
+print_r($fruits);
+
+
+$numbers = [2,4,5,6,8,9,3,5,6];
+
+$sqr = array_map(function ($num) {
+    return $num * $num;
+}, $numbers);
+
+print_r($sqr);
+
+
+$ar = [
+    12,[5,3],6
+];
+
+$s = array_map(function ($ar) {
+    return $ar + $ar;
+},$ar);
+
+print_r($s);
+
+echo "\n";
+
+
+
+$evenNumber = array_filter($numbers, function ($num) {
+    return $num % 2 == 0;
+});
+
+print_r($evenNumber);
+
+
+$persons = [
+    'peter' => 18,
+    'huru' => 19,
+    'zeas' => 21,
+    'aadhya' => 15,
+    'Zoya' => 16,
+    'samarth' => 50,
+    'samadhan' => 12,
+];
+
+$voters = array_filter($persons, function ($person) {
+    return $person >= 18;
+}, ARRAY_FILTER_USE_BOTH);
+
+
+print_r($voters);
 
 
 echo "\n";
