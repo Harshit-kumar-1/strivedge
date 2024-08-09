@@ -290,17 +290,25 @@ print_r($fruitColors);
 // array-unique
 
 $uniqueFruitsColor = array_unique($fruitColors);
+$uniqueFruitsColor = array_unique($fruitColors);
 print_r($uniqueFruitsColor);
 
 // array_map();
 $fruits = array_map(function ($fruit) {
+
     echo $fruit . "\n";
+
+    echo $fruit . "\n";
+
 }, $fruitColors);
 
 print_r($fruits);
 
 
 $numbers = [2, 4, 5, 6, 8, 9, 3, 5, 6];
+
+$numbers = [2, 4, 5, 6, 8, 9, 3, 5, 6];
+
 
 $sqr = array_map(function ($num) {
     return $num * $num;
@@ -310,6 +318,9 @@ print_r($sqr);
 
 
 $ar = [
+    12,
+    [5, 3],
+    6,
     12,
     [5, 3],
     6
