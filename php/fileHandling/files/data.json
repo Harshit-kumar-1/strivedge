@@ -1,0 +1,58 @@
+[
+    {
+        "sno": "1",
+        "name": "Harshit",
+        "age": "20",
+        "phone": "015266789",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "2",
+        "name": "Harsh",
+        "age": "-",
+        "phone": "-",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "3",
+        "name": "Viraj",
+        "age": "-",
+        "phone": "-",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "4",
+        "name": "Kishor",
+        "age": "-",
+        "phone": "-",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "5",
+        "name": "Mit",
+        "age": "23",
+        "phone": "-",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "6",
+        "name": "Arjun",
+        "age": "22",
+        "phone": "0123456789",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    },
+    {
+        "sno": "7",
+        "name": "Kuldeep",
+        "age": "-",
+        "phone": "0123456789",
+        "add": "Ahemdabad",
+        "state": "Gujarat"
+    }
+]

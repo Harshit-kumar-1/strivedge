@@ -93,6 +93,44 @@ $user_row = mysqli_fetch_assoc($user_res);
                 <?php } ?>
             </table>
         </div>
+        
+
+        <!-- Data read in another file  -->
+        <div class="responsive-table">
+            <table border="1" class="data-table">
+                <tr>
+                    <th>Sno.</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>
+
+                <?php if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $sno = $row['sno'];
+                        $cname = $row['cname'];
+                        $contact = $row['contact'];
+                        $address = $row['address'];
+                        $city = $row['city'];
+                        $country = $row['country']; ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars(ucfirst($sno)); ?></td>
+                            <td><?php echo htmlspecialchars(ucfirst($cname)); ?></td>
+                            <td><?php echo htmlspecialchars(ucfirst($contact)); ?></td>
+                            <td><?php echo htmlspecialchars(ucfirst($address)); ?></td>
+                            <td><?php echo htmlspecialchars(ucfirst($city)); ?></td>
+                            <td><?php echo htmlspecialchars(ucfirst($country)); ?></td>
+                        </tr>
+                    <?php }
+                } else { ?>
+                    <tr>
+                        <td colspan="6">No records found</td>
+                    </tr>
+                <?php } ?>
+            </table>
+        </div>
     </div>
 </body>
 

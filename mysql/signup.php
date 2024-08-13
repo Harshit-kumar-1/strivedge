@@ -57,8 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (mysqli_query($con, $sql)) {
             if(move_uploaded_file($tempname, $folder)){
-                // $msg = "Sign up success. please go to login.";
-                
+                // $msg = "Sign up success. please go to login.";               
                 $msg = "Signup Success.";
             }
             else{

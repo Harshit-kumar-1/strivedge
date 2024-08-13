@@ -1,36 +1,10 @@
-<?php
-//
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-//
-//require 'db.config.php';
-//
-//if($_SERVER['REQUEST_METHOD'] == "POST"){
-//
-//    $email = $_POST['email'];
-//    $password = $_POST['password'];
-//
-//
-//    $sql = "SELECT email, pass from user where email = '$email' and pass = '$pass' ";
-//
-//    $result = mysqli_query($con, $sql);
-//
-//    if (mysqli_num_rows($result) > 0) {
-//        $msg = "Login Success";
-//        header("location: index.php");
-//    } else {
-//        // $err = 'Invalid name and password';
-//        $msg = `Such bata bhul gaya naa ? ja forget kar le`. mysqli_error($con);
-//    }
-//
-//}
-//
-//
-//mysqli_close($con);
-?>
+<?php 
 
-<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 
 include 'db.config.php';
 session_start();
@@ -44,69 +18,38 @@ if (isset($_SESSION['user_email'])) {
 //session_start(); Start the session
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Prepare SQL query using prepared statements
-    $sql = "SELECT email, pass FROM user WHERE email = ?";
-    $stmt = mysqli_prepare($con, $sql);
 
-    // $sql = "SELECT pass FROM user WHERE email = '$email'";
+    $stmt = mysqli_prepare($con, "SELECT pass from user where email = ?");
+    mysqli_stmt_bind_param($stmt,"s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
-    // $result = mysqli_query($con, $sql);
-    // $row = mysqli_fetch_array($result);
-    // $db_pass = $row['pass'];
-    // if(mysqli_num_rows($result) > 0){
-    //     if(password_verify($password, $db_pass)){
-    //         //$msg = "Email and password correct.";
-    //         header("Location: index.php");
-    //         exit();
-    //     }else{
-    //         $msg = "Email and password is invalid.";
-    //     }
+    if(mysqli_num_rows($result) > 0){
 
-    // }else{
-    //     $msg = "Email and passwords not exist";
-    // }
+        $row = mysqli_fetch_array($result);
+        $db_pass = $row['pass'];
 
-    if ($stmt) {
-        // Bind the email parameter
-        mysqli_stmt_bind_param($stmt, "s", $email);
-
-        // Execute the statement
-        mysqli_stmt_execute($stmt);
-
-        // Bind the result to variables
-        mysqli_stmt_bind_result($stmt, $db_email, $db_password);
-
-        // Fetch the result
-        if (mysqli_stmt_fetch($stmt)) {
-            // Verify the password
-            if (password_verify($password, $db_password)) {
-                // Password is correct, set session variables
-                $_SESSION['user_email'] = $db_email;
-
-                //Redirect to index page
-                 header("Location: index.php");
-                exit(); // Make sure to exit after redirect
-            } else {
-                // Invalid password
-                $msg = "Invalid password.";
-            }
-        } else {
-            // No user found with that email
-            $msg = "Invalid email or password.";
+        if(password_verify($password, $db_pass)){
+            $_SESSION['user_email'] = $email;
+            header("Location: index.php");
+            exit();
+        }else{
+            $msg = "Email and Password is wrong";
         }
-
-        // Close the statement
-        mysqli_stmt_close($stmt);
-    } else {
-        $msg = "Database query failed: " . mysqli_error($con);
+        
+    }else{
+        $msg = "Email is not Exist in db";
     }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($con);
+
 }
 
-// Close the database connection
-mysqli_close($con);
 ?>
 
 <!DOCTYPE html>

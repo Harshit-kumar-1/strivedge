@@ -1,0 +1,36 @@
+The name is Harshit 
+The age is 20 
+The Address is sanoma palace Ahemdabad 
+The Work at is Strivedge Technolabs pvt.ltd. 
+The name is Harshit 
+The age is 20 
+The Address is sanoma palace Ahemdabad 
+The Work at is Strivedge Technolabs pvt.ltd. 
+The name is Harshit 
+The age is 20 
+The Address is sanoma palace Ahemdabad 
+The Work at is Strivedge Technolabs pvt.ltd. 
+name Harshit.
+age 20.
+phone 0123456789.
+add Ahemdabad.
+name Kuldeep.
+age 20.
+phone 0123456789.
+add Ahemdabad.
+name Viraj.
+age 20.
+phone 0123456789.
+add Ahemdabad.
+name Kishor.
+age 20.
+phone 0123456789.
+add Ahemdabad.
+name Mit.
+age 20.
+phone 0123456789.
+add Ahemdabad.
+name Arjun.
+age 20.
+phone 0123456789.
+add Ahemdabad.
