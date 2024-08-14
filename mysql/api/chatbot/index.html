@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <style>
+        #messages {
+            border: 1px solid #ccc;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        #message_input {
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat Application</h1>
+    <div>
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" placeholder="Enter your name">
+    </div>
+    <div>
+        <label for="channel">Channel Name:</label>
+        <input type="text" id="channel" placeholder="Enter channel name">
+        <button onclick="joinChannel()">Join Channel</button>
+    </div>
+    <div id="messages"></div>
+    <div>
+        <input type="text" id="message_input" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
