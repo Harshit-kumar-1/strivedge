@@ -5,77 +5,77 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-$array = [
-    [   
-        'sno' => '1',
-        'name' => 'Harshit',
-        'age' => '20',
-        'phone' => '015266789',
-        'add' => 'Ahemdabad',
-        'state' => 'Gujarat',
-    ],
-    [
-        'sno' => '2',
-        'name' => 'Harsh',
-        'age' => '-',
-        'phone' => '-',
-        'add' => 'Ahemdabad',
-        'state' => 'Gujarat',
+// $array = [
+//     [   
+//         'sno' => '1',
+//         'name' => 'Harshit',
+//         'age' => '20',
+//         'phone' => '015266789',
+//         'add' => 'Ahemdabad',
+//         'state' => 'Gujarat',
+//     ],
+//     [
+//         'sno' => '2',
+//         'name' => 'Harsh',
+//         'age' => '-',
+//         'phone' => '-',
+//         'add' => 'Ahemdabad',
+//         'state' => 'Gujarat',
 
-    ],
-    [
-        'sno' => '3',
-        'name' => 'Viraj',
-        'age' => '-',
-        'phone' => '-',
-        'add' => 'Ahemdabad',    
-        'state' => 'Gujarat',
-    ],
-    [
-        'sno' => '4',
-        'name' => 'Kishor',
-        'age' => '-',
-        'phone' => '-',
-        'add' => 'Ahemdabad',    
-        'state' => 'Gujarat',
-    ],
-    [
-        'sno' => '5',
-        'name' => 'Mit',
-        'age' => '23',
-        'phone' => '-',
-        'add' => 'Ahemdabad',    
-        'state' => 'Gujarat',
-    ],
-    [
-        'sno' => '6',
-        'name' => 'Arjun',
-        'age' => '22',
-        'phone' => '0123456789',
-        'add' => 'Ahemdabad',    
-        'state' => 'Gujarat',
-    ],
-    [
-        'sno' => '7',
-        'name' => 'Kuldeep',
-        'age' => '-',
-        'phone' => '0123456789',
-        'add' => 'Ahemdabad',    
-        'state' => 'Gujarat',
-    ]
+//     ],
+//     [
+//         'sno' => '3',
+//         'name' => 'Viraj',
+//         'age' => '-',
+//         'phone' => '-',
+//         'add' => 'Ahemdabad',    
+//         'state' => 'Gujarat',
+//     ],
+//     [
+//         'sno' => '4',
+//         'name' => 'Kishor',
+//         'age' => '-',
+//         'phone' => '-',
+//         'add' => 'Ahemdabad',    
+//         'state' => 'Gujarat',
+//     ],
+//     [
+//         'sno' => '5',
+//         'name' => 'Mit',
+//         'age' => '23',
+//         'phone' => '-',
+//         'add' => 'Ahemdabad',    
+//         'state' => 'Gujarat',
+//     ],
+//     [
+//         'sno' => '6',
+//         'name' => 'Arjun',
+//         'age' => '22',
+//         'phone' => '0123456789',
+//         'add' => 'Ahemdabad',    
+//         'state' => 'Gujarat',
+//     ],
+//     [
+//         'sno' => '7',
+//         'name' => 'Kuldeep',
+//         'age' => '-',
+//         'phone' => '0123456789',
+//         'add' => 'Ahemdabad',    
+//         'state' => 'Gujarat',
+//     ]
 
-];
+// ];
 
 
-$jsonData = json_encode( $array , JSON_PRETTY_PRINT);
+// $jsonData = json_encode( $array , JSON_PRETTY_PRINT);
 
 $file = "files/data.json";
 
-$writeInFile = fopen($file , "w");
+// $writeInFile = fopen($file , "w");
 
-fwrite($writeInFile, $jsonData);
+// fwrite($writeInFile, $jsonData);
 
-fclose($writeInFile);
+// fclose($writeInFile);
 
 
 $jsonfile = file_get_contents( $file );
@@ -100,7 +100,7 @@ $Databyjson = json_decode($jsonfile, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Home Page</title>
+    <title>Json Data in Table</title>
 </head>
 
 <body>
