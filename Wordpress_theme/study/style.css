@@ -1,0 +1,304 @@
+/** for styling */
+/*
+Theme Name: Study
+Theme URI: http://localhost:81/study
+Author: Harshit Kumar
+Author URI: http://example.com
+Description: A custom theme with a dynamic header.
+Version: 1.0
+*/
+
+/* Basic styling for header */
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #80c757;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    flex: 1;
+}
+
+.nav-menu {
+    flex: 2;
+    text-align: right;
+}
+
+.nav-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu-list li {
+    display: inline;
+    margin-left: 20px;
+}
+
+li a{
+    text-decoration: none;
+} */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+/* 
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+  background-color: #e3e6f3;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.logo a {
+  color: #088178;
+  font-family: "Abril Fatface", serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  transition: ease 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 1px 1px 5px #088178;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  list-style: none;
+  padding: 20px;
+}
+
+nav ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: ease 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #088178;
+}
+
+#hero {
+  width: 100%;
+  height: 90vh;
+  background-image: url('http://localhost:81/wordpress/wp-content/themes/study/assets/hero-img.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  padding: 20px 150px;
+}
+
+#hero h1 {
+  margin: 10% 0 0;
+  word-spacing: 10px;
+}
+
+#hero h1 strong {
+  color: #088178;
+  font-family: "Abril Fatface", serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+#hero h4 {
+  margin-top: 15px;
+}
+
+#hero button {
+  background-image: url("http://localhost:81/wordpress/wp-content/themes/study/assets/button.png");
+  background-repeat: no-repeat;
+  border: 0;
+  padding: 14px 80px 14px 50px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#hero button a {
+  color: #088178;
+}
+
+#hero button:hover {
+  box-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+}
+
+.section-p {
+  padding: 80px;
+}
+
+#section-hero{
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+#section-hero article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#section-hero article img{
+    width: 100%;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+#section-hero article a{
+    color: #088178;
+
+}
+
+article div{
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+abbr{
+    cursor: pointer;
+}
+
+/* blog page */
+#section-blog{
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 60px;
+    width: 20%;
+    height: 90vh;
+    overflow: hidden;
+    position: fixed;
+}
+
+#section-blog ul li{
+    width: 100%;
+    border-bottom: 1px solid black;
+    transition: ease 0.5s;
+}
+
+#section-blog ul li:hover{
+    background-color: #088178;
+}
+#section-blog ul li:hover a{
+    color: white;
+}
+
+
+
+#section-blog a{
+    display: block;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 15px;
+}
+
+#main-blog{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: ; */
+}
+
+#section-blog-article{
+    padding: 40px 80px;
+    margin-left: 20%;
+}
+
+#section-blog-article article h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#section-blog-article article img{
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 80px;
+}
+
+
+div#mobile,
+#close{
+    display: none;
+}
+
+
+@media (max-width: 1200px){
+    #section-hero article{
+        display: flow;
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+}
+
+
+.title{
+    margin: 100px auto;
+    width: 50%;
+    text-align: center;
+}
