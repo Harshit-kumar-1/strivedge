@@ -1,0 +1,33 @@
+open Xampp - sudo /opt/lampp/manager-linux-x64.run
+
+
+strivedge@strivedge-hp:~$ cd opt/lampp/htdocs
+bash: cd: opt/lampp/htdocs: No such file or directory
+strivedge@strivedge-hp:~$ cd /opt/lampp/htdocs
+strivedge@strivedge-hp:/opt/lampp/htdocs$ code .
+strivedge@strivedge-hp:/opt/lampp/htdocs$ cd /opt/lampp/
+strivedge@strivedge-hp:/opt/lampp$ ls
+apache2       htdocs   libexec                pear            sbin
+bin           icons    licenses               php             share
+build         img      logs                   phpmyadmin      temp
+cgi-bin       include  man                    proftpd         THIRDPARTY
+ctlscript.sh  info     manager-linux-x64.run  properties.ini  uninstall
+docs          lampp    manual                 README.md       uninstall.dat
+error         lib      modules                README-wsrep    var
+etc           lib64    mysql                  RELEASENOTES    xampp
+strivedge@strivedge-hp:/opt/lampp$ cd htdocs/
+strivedge@strivedge-hp:/opt/lampp/htdocs$ sudo mkdir php
+[sudo] password for strivedge: 
+strivedge@strivedge-hp:/opt/lampp/htdocs$ sudo chown -R $USER:$USER PHP
+chown: cannot access 'PHP': No such file or directory
+strivedge@strivedge-hp:/opt/lampp/htdocs$ sudo chown -R $USER:$USER php
+strivedge@strivedge-hp:/opt/lampp/htdocs$ cd php
+strivedge@strivedge-hp:/opt/lampp/htdocs/php$ code .
+strivedge@strivedge-hp:/opt/lampp/htdocs/php$ 
+
+
+
+
+
+
+
