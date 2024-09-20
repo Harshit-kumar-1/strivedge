@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var menuBtn = document.querySelector('.menuIcon');
     var closeBtn = document.getElementById('closeIcon');
     var navbar = document.getElementById('navbar');
+    var menuLinks = document.querySelectorAll('.menu-links');
 
     menuBtn.addEventListener('click', function () {
         if (navbar.style.display === "none" || navbar.style.display === "") {
@@ -12,6 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener('click', function () {
         navbar.classList.remove("active");
     });
+
+    // console.log(menuLinks);
+
+    menuLinks.forEach((link) => {
+        // console.log(navbar);
+        link.addEventListener('click', function () {
+            navbar.classList.remove("active");
+        });
+    });
+
 });
 
 
@@ -36,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const target = document.querySelector(this.getAttribute('data-target'));
             const icon = this.querySelector('i');
 
-            console.log(target, icon);
+            // console.log(target, icon);
 
             target.classList.toggle('show');
 
