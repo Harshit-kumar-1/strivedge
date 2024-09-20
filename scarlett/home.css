@@ -2384,3 +2384,45 @@ footer .scarlett-container .footer-content .footer-grid .grid-column ul li a {
     color: #FFFFFF;
     margin: 0 auto;
 }
+
+
+
+@media (max-width:1680px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width:1440px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width:1199px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width:991px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width:767px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+
+@media (max-width:576px) {
+    footer .scarlett-container .footer-content .footer-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
